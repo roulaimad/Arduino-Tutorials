@@ -11,6 +11,7 @@ function TutorialsList() {
         {arduinoTutorialsData.map((tutorial) => (
           <TutorialCard
             key={tutorial.id}
+            id={tutorial.id}
             image={tutorial.image}
             title={tutorial.title}
           />

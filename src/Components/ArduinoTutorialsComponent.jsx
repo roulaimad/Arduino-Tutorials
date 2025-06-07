@@ -1,13 +1,23 @@
 import React from "react";
-import orangeBackground from "../assets/orange-background.svg";
+import arduinoSvg from "../assets/arduino-svgrepo-com.svg"; // adjust path if needed
 import TutorialsList from "./TutorialsList";
+
 function ArduinoTutorialsComponent() {
   return (
     <div
-      className="bg-no-repeat bg-center bg-cover p-8 text-center max-w-6xl mx-auto"
-      style={{ backgroundImage: `url(${orangeBackground})` }}
+      className="p-10 text-center max-w-6xl mx-auto"
+      style={{
+        backgroundColor: "#F97316",
+        backgroundImage: `url(${arduinoSvg})`,
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        backgroundSize: "80px 40px",
+      }}
     >
-      <h1 className="font-orbitron text-4xl text-white uppercase">
+      <h1
+        className="font-bold text-6xl pb-14 text-white uppercase"
+        style={{ fontFamily: "Rajdhani, sans-serif" }}
+      >
         Arduino tutorials for beginners
       </h1>
       <br />
