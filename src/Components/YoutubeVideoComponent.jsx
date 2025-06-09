@@ -4,7 +4,7 @@ import arduinoTutorialsData from "../Data/ARDUINO-TUTORIAL-DATA";
 import arduinoSvg from "../assets/arduino-svgrepo-com.svg";
 function YoutubeVideoComponent({ youtubeLink, title }) {
   return (
-    <div>
+    <div className="mb-2">
       <div
         className="p-10 text-center max-w-6xl mx-auto"
         style={{
