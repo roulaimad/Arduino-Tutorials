@@ -1,5 +1,5 @@
 import React from "react";
-import arduinoSvg from "../assets/arduino-svgrepo-com.svg"; // adjust path if needed
+import arduinoSvg from "../assets/arduino-svgrepo-com.svg";
 import TutorialsList from "./TutorialsList";
 
 function ArduinoTutorialsComponent() {

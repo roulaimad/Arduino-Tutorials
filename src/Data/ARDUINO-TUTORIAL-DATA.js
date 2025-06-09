@@ -3,7 +3,7 @@ const arduinoTutorialsData = [
     id: 1,
     title: "Blinking the builtin LED",
     image: "https://i.ytimg.com/vi/PcusGFga46U/mqdefault.jpg",
-    youtubeLink: "https://www.youtube.com/watch?v=PCusGFga46U",
+    youtubeLink: "https://www.youtube.com/watch?v=PcusGFga46U",
     description:
       "Get started by blinking the onboard LED using basic digitalWrite commands.",
     tutorialGoals: [
@@ -299,7 +299,7 @@ const arduinoTutorialsData = [
     id: 16,
     title: "PCF8574 I2C I/O expander with LCD",
     image: "https://i.ytimg.com/vi/aACOC9XBBks/mqdefault.jpg",
-    youtubeLink: "https://www.youtube.com/watch?v=UoyhkYbqvq8",
+    youtubeLink: "https://www.youtube.com/watch?v=aACOC9XBBks",
     description: "Expand digital I/O with PCF8574 over I2C for LCD control.",
     tutorialGoals: [
       "Using PCF8574 I/O expander",
@@ -319,7 +319,7 @@ const arduinoTutorialsData = [
     id: 17,
     title: "Temperature data logger with SD card",
     image: "https://i.ytimg.com/vi/OXieoH5IsAI/mqdefault.jpg",
-    youtubeLink: "https://www.youtube.com/watch?v=Xpr6rGEJ6pk",
+    youtubeLink: "https://www.youtube.com/watch?v=OXieoH5IsAI",
     description: "Log temperature data to an SD card for later review.",
     tutorialGoals: [
       "Reading sensor data",
@@ -340,7 +340,7 @@ const arduinoTutorialsData = [
     id: 18,
     title: "MPU6050 accelerometer and gyroscope sensor",
     image: "https://i.ytimg.com/vi/m67vZaXu0zY/mqdefault.jpg",
-    youtubeLink: "https://www.youtube.com/watch?v=9y8ScwKN7bI",
+    youtubeLink: "https://www.youtube.com/watch?v=m67vZaXu0zY",
     description: "Read motion and orientation data using the MPU6050 sensor.",
     tutorialGoals: [
       "Interfacing MPU6050 via I2C",
