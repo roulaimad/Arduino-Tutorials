@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import arduinoTutorialsData from "../Data/ARDUINO-TUTORIAL-DATA";
 import YoutubeVideoComponent from "./YoutubeVideoComponent";
 import TutorialDetailsComponent from "./TutorialDetailsComponent";
+import TutorialHeader from "./TutorialHeader";
 function TutorialDetailsPage() {
   const { id } = useParams();
   const title = arduinoTutorialsData[id - 1].title;
@@ -13,9 +14,21 @@ function TutorialDetailsPage() {
   const componentsNeeded = arduinoTutorialsData[id - 1].componentsNeeded;
   const code = arduinoTutorialsData[id - 1].arduinoCode;
   const circuit = arduinoTutorialsData[id - 1].circuit;
+  const tags = arduinoTutorialsData[id - 1].tags;
+  const difficulty = arduinoTutorialsData[id - 1].difficulty;
+  const time = arduinoTutorialsData[id - 1].time;
+  const ratings = arduinoTutorialsData[id - 1].ratings;
 
   return (
     <>
+      <TutorialHeader
+        title={title}
+        description={description}
+        tags={tags}
+        difficulty={difficulty}
+        time={time}
+        ratings={ratings}
+      />
       <YoutubeVideoComponent youtubeLink={youtubeLink} />
       <TutorialDetailsComponent
         title={title}
