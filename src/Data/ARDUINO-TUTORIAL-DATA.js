@@ -35,7 +35,7 @@ void loop() {
     title: "وميض مصباح على لوحة تجارب",
     image: "https://i.ytimg.com/vi/Smfzx4WBb9o/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=Smfzx4WBb9o",
-    description: "بناء دائرة أساسية… وجعل مصباح خارجي يومض…",
+    description: "بناء دائرة أساسية وجعل مصباح خارجي يومض…",
     tutorialGoals: [
       "توصيل مصباح بلوحة التجارب",
       "استخدام digitalWrite",

@@ -23,12 +23,20 @@ function TutorialCard({ id, image, title, description, time, tags }) {
       </div>
 
       {/*=========== Title ===========*/}
-      <h2 dir="rtl" className="text-lg font-bold text-gray-800 mb-1 text-right">
+      <h2
+        dir="rtl"
+        title={title}
+        className="text-lg font-bold text-gray-800 mb-1 text-right line-clamp-1"
+      >
         {title}
       </h2>
 
       {/*=========== Description ===========*/}
-      <p dir="rtl" className="text-sm text-gray-600 mb-4 text-right">
+      <p
+        title={description}
+        dir="rtl"
+        className="text-sm text-gray-600 mb-4 text-right line-clamp-1"
+      >
         {description}
       </p>
 
