@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import arduinoTutorialsData from "../Data/ARDUINO-TUTORIAL-DATA";
 import arduinoSvg from "../assets/arduino-svgrepo-com.svg";
-function YoutubeVideoComponent({ youtubeLink, title }) {
+function YoutubeVideoComponent({ youtubeLink }) {
   return (
     <div className="mb-2">
       <div

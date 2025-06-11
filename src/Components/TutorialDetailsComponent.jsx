@@ -47,8 +47,8 @@ function TutorialDetailsComponent({
           </div>
           <CodeBlock code={code} language="javascript" />
           <div className="bg-white text-black rounded-xl p-6 text-left mb-6">
-            <b className="block mb-2">Circuit Diagram</b>
-            <img src={circuit} alt="" />
+            <b className="block mb-2 text-2xl">Circuit Diagram</b>
+            <img src={circuit} alt="circuit image" />
           </div>
         </div>
       </div>

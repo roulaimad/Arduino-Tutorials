@@ -1,17 +1,17 @@
-const arduinoTutorialsData = [
+const arduinoTutorialsDataEN = [
   {
     id: 1,
-    title: "وميض LED المدمج",
+    title: "Blinking the builtin LED",
     image: "https://i.ytimg.com/vi/PcusGFga46U/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=PcusGFga46U",
     description:
-      "تعرّف على كيفية جعل LED المدمج يومض باستخدام خرج Arduino الرقمي…",
+      "Discover how to make the built‑in LED blink using the Arduino’s digital output...",
     tutorialGoals: [
-      "جعل LED المدمج يومض",
-      "العمل باستخدام بيئة Arduino IDE",
-      "معرفة كيفية رفع sketch إلى جهاز Arduino",
+      "Blinking the onboard LED",
+      "Working with the Arduino IDE",
+      "Knowing how to upload a sketch to your Arduino",
     ],
-    componentsNeeded: ["1× Arduino", "1× كابل USB", "1× حاسوب"],
+    componentsNeeded: ["1× Arduino", "1× USB cable", "1× Computer"],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-NL/master/E02-led-knipperen-breadboard/led-knipperen-breadboard.png",
     arduinoCode: `
@@ -23,31 +23,26 @@ void loop() {
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
-}
-`,
-    difficulty: "مبتدئ",
-    tags: ["أساسيات", "LED"],
-    time: "10 دقائق",
-    ratings: 4.5,
+}`,
   },
   {
     id: 2,
-    title: "وميض LED على لوحة تجارب",
+    title: "Blinking LED on breadboard",
     image: "https://i.ytimg.com/vi/Smfzx4WBb9o/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=Smfzx4WBb9o",
-    description: "بناء دائرة أساسية… وجعل LED خارجي يومض…",
+    description: "Build a basic circuit… blink an external LED...",
     tutorialGoals: [
-      "توصيل LED بلوحة التجارب",
-      "استخدام digitalWrite",
-      "التحكم في التأخيرات",
+      "Wiring an LED to the breadboard",
+      "Using digitalWrite",
+      "Controlling delays",
     ],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
+      "1× USB cable",
+      "1× Breadboard",
       "1× LED",
-      "1× مقاوم 220Ω",
-      "2× أسلاك توصيل (Jumper wires)",
+      "1× 220Ω resistor",
+      "2× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-NL/master/E02-led-knipperen-breadboard/led-knipperen-breadboard.png",
@@ -59,31 +54,26 @@ void loop() {
   delay(500);
   digitalWrite(ledPin, LOW);
   delay(500);
-}
-`,
-    difficulty: "مبتدئ",
-    tags: ["أساسيات", "LED", "لوحة تجارب"],
-    time: "15 دقائق",
-    ratings: 4.2,
+}`,
   },
   {
     id: 3,
-    title: "تلاشي LED باستخدام PWM",
+    title: "Fading LED with PWM",
     image: "https://i.ytimg.com/vi/1fhRf-0RxyQ/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=1fhRf-0RxyQ",
-    description: "تعلم PWM من خلال إنشاء تأثير تلاشي على LED…",
+    description: "Learn PWM by creating a fade effect on an LED...",
     tutorialGoals: [
-      "فهم analogWrite وPWM",
-      "تأثير التلاشي (Fade‑in/out)",
-      "التحكم في مستوى السطوع",
+      "Understanding analogWrite and PWM",
+      "Fade-in/out",
+      "Brightness control",
     ],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
+      "1× USB cable",
+      "1× Breadboard",
       "1× LED",
-      "1× مقاوم 220Ω",
-      "2× أسلاك توصيل",
+      "1× 220Ω resistor",
+      "2× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-NL/master/E02-led-knipperen-breadboard/led-knipperen-breadboard.png",
@@ -93,33 +83,23 @@ void setup() { pinMode(ledPin, OUTPUT); }
 void loop() {
   for (int b = 0; b <= 255; b++){ analogWrite(ledPin,b); delay(10); }
   for (int b = 255; b >= 0; b--){ analogWrite(ledPin,b); delay(10); }
-}
-`,
-    difficulty: "مبتدئ",
-    tags: ["أساسيات", "LED", "PWM"],
-    time: "20 دقائق",
-    ratings: 4.7,
+}`,
   },
   {
     id: 4,
-    title: "التحكم بسرعة الوميض بمقاومة متغيرة",
+    title: "Control blinking speed with potentiometer",
     image: "https://i.ytimg.com/vi/3hGEusmU-vQ/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=3hGEusmU-vQ",
-    description:
-      "استخدام مقاومة متغيرة (Potentiometer) للتحكم في معدل وميض LED…",
-    tutorialGoals: [
-      "المدخل التناظري",
-      "تعيين القيم (Mapping)",
-      "معدل وميض ديناميكي",
-    ],
+    description: "Use a potentiometer to control LED blink rate...",
+    tutorialGoals: ["Analog input", "Mapping values", "Dynamic blink rate"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
+      "1× USB cable",
+      "1× Breadboard",
       "1× LED",
-      "1× مقاوم 220Ω",
-      "1× مقاومة متغيرة",
-      "3× أسلاك توصيل",
+      "1× 220Ω resistor",
+      "1× Potentiometer",
+      "3× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E04-potmeter/potmeter.png",
@@ -134,33 +114,24 @@ void loop() {
   delay(speed);
   digitalWrite(led, LOW);
   delay(speed);
-}
-`,
-    difficulty: "مبتدئ",
-    tags: ["أساسيات", "LED", "مقاومة متغيرة", "Analog Input"],
-    time: "25 دقائق",
-    ratings: 4.3,
+}`,
   },
   {
     id: 5,
-    title: "التحكم بـ LED بزر ضغط على Arduino",
+    title: "Control LED with pushbutton on Arduino",
     image: "https://i.ytimg.com/vi/5aR0cHKc-JA/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=5aR0cHKc-JA",
-    description: "استخدام زر الضغط لتشغيل/إيقاف LED…",
-    tutorialGoals: [
-      "الدخل الرقمي",
-      "مؤازمة الزر (debouncing)",
-      "المنطق If/else",
-    ],
+    description: "Use a pushbutton to toggle an LED...",
+    tutorialGoals: ["Digital input", "Button debouncing", "If/else logic"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
+      "1× USB cable",
+      "1× Breadboard",
       "1× LED",
-      "1× مقاوم 220Ω",
-      "1× زر ضغط",
-      "1× مقاوم 10 kΩ",
-      "4× أسلاك توصيل",
+      "1× 220Ω resistor",
+      "1× Pushbutton",
+      "1× 10 kΩ resistor",
+      "4× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E05-switch/switch.png",
@@ -174,27 +145,22 @@ void setup() {
 void loop() {
   int st = digitalRead(btn);
   digitalWrite(led, st == HIGH ? HIGH : LOW);
-}
-`,
-    difficulty: "مبتدئ",
-    tags: ["أساسيات", "LED", "زر ضغط", "Digital Input"],
-    time: "30 دقائق",
-    ratings: 4.6,
+}`,
   },
   {
     id: 6,
-    title: "قراءة حساس الحرارة DS18B20 بنظام 1‑Wire",
+    title: "Reading 1-wire DS18B20 temperature sensor",
     image: "https://i.ytimg.com/vi/NknCz0vC-RY/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=NknCz0vC-RY",
-    description: "التعامل مع DS18B20 لقراءة درجة الحرارة…",
-    tutorialGoals: ["1‑Wire", "بيانات الحرارة", "استخدام المكتبة"],
+    description: "Interface with DS18B20 to read temperature...",
+    tutorialGoals: ["1‑Wire", "Temperature data", "Library usage"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× حساس DS18B20",
-      "1× مقاوم 4.7 kΩ",
-      "3× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× DS18B20 sensor",
+      "1× 4.7 kΩ resistor",
+      "3× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E06-1-wire-temp-sensor-DS18B20/one-wire-temperature.png",
@@ -219,26 +185,25 @@ void loop(){
   Serial.print(tempC);
   Serial.println(" °C");
   delay(1000);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["مستشعرات", "حرارة", "DS18B20", "1-Wire", "مكتبة"],
-    time: "35 دقائق",
-    ratings: 4.4,
+}`,
   },
   {
     id: 7,
-    title: "حساس المسافة بالموجات فوق الصوتية HC‑SR04",
+    title: "HC-SR04 ultrasonic distance sensor",
     image: "https://i.ytimg.com/vi/nkSUFV7gCNU/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=nkSUFV7gCNU",
-    description: "قياس المسافة باستخدام HC‑SR04…",
-    tutorialGoals: ["توصيل trigger/echo", "توقيت pulseIn", "تحويل المسافة"],
+    description: "Measure distance with HC‑SR04...",
+    tutorialGoals: [
+      "Wiring trigger/echo",
+      "pulseIn timing",
+      "Distance conversion",
+    ],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× حساس HC‑SR04",
-      "4× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× HC‑SR04 sensor",
+      "4× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E07-ultrasonic-sensor-HC-SR04/ultrasoon-sensor-HC-SR04.png",
@@ -261,29 +226,25 @@ void loop(){
   float dist = (dur / 2.0) * 0.0343;
   Serial.print("Distance: "); Serial.print(dist); Serial.println(" cm");
   delay(500);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["مستشعرات", "مسافة", "HC-SR04", "موجات فوق صوتية"],
-    time: "40 دقائق",
-    ratings: 4.8,
+}`,
   },
   {
     id: 8,
-    title: "ذراع PS2 التناظري مع زر",
+    title: "Analog PS2 joystick with push button",
     image: "https://i.ytimg.com/vi/AJLcq93glp0/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=AJLcq93glp0",
-    description: "واجهة ذراع PS2 تناظري للمحاور X/Y وزر…",
-    tutorialGoals: ["قراءة analogRead للمحاور X/Y", "حالة الزر", "تفسير الدخل"],
+    description: "Interface a PS2 joystick with analog X/Y and button...",
+    tutorialGoals: ["analogRead X/Y", "button state", "input interpretation"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× وحدة ذراع PS2",
-      "5× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× PS2 joystick module",
+      "5× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E08-analog-ps2-joystick/analog-ps2-joystick.png",
+
     arduinoCode: `
 const int joyX = A0;
 const int joyY = A1;
@@ -300,32 +261,28 @@ void loop(){
   int btn = digitalRead(joyBtn);
   Serial.print("X: "); Serial.print(x);
   Serial.print(" Y: "); Serial.print(y);
-  Serial.print(" زر: "); Serial.println(btn == LOW ? "مضغوط" : "مفرج");
+  Serial.print(" Button: "); Serial.println(btn == LOW ? "Pressed" : "Released");
   delay(200);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["Analog Input", "Joystick", "PS2", "زر"],
-    time: "45 دقائق",
-    ratings: 4.1,
+}`,
   },
   {
     id: 9,
-    title: "مستقبل IR مع ريموت",
+    title: "Infrared receiver with remote",
     image: "https://i.ytimg.com/vi/IYYOoyjQS-8/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=IYYOoyjQS-8",
-    description: "فك شفرة إشارات IR باستخدام الريموت…",
-    tutorialGoals: ["استقبال IR", "مكتبة IRremote", "التصرف بناءً على الأكواد"],
+    description: "Decode IR signals with remote...",
+    tutorialGoals: ["Receiving IR", "IRremote lib", "Action on codes"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× وحدة استقبال IR",
-      "1× ريموت IR",
-      "3× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× IR receiver module",
+      "1× IR remote",
+      "3× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E09-ir-receiver/ir-receiver.png",
+
     arduinoCode: `
 #include <IRremote.h>
 
@@ -343,30 +300,25 @@ void loop(){
     Serial.print("Code: 0x"); Serial.println(results.value, HEX);
     irrecv.resume();
   }
-}
-`,
-    difficulty: "متوسط",
-    tags: ["IR", "ريموت", "مكتبة IRremote", "استقبال"],
-    time: "50 دقائق",
-    ratings: 4.9,
+}`,
   },
-
   {
     id: 10,
-    title: "صوت من صفارة بيزو / مكبر صوت",
+    title: "Sound from a piezo buzzer / speaker",
     image: "https://i.ytimg.com/vi/Ga-QI4166wI/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=Ga-QI4166wI",
-    description: "توليد ألحان باستخدام صفارة بيزو…",
-    tutorialGoals: ["tone()/noTone()", "التحكم بالصوت", "ألحان بسيطة"],
+    description: "Generate melodies using a piezo buzzer...",
+    tutorialGoals: ["tone()/noTone()", "sound control", "simple melodies"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× صفارة بيزو",
-      "2× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× Piezo buzzer",
+      "2× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E10-beeper-buzzer/beeper-buzzer.png",
+
     arduinoCode: `
 const int buzzer = 8;
 void setup(){}
@@ -375,30 +327,21 @@ void loop(){
   delay(600);
   tone(buzzer, 660, 500);
   delay(600);
-}
-`,
-    difficulty: "مبتدئ",
-    tags: ["صوت", "صفارة بيزو", "tone", "noTone"],
-    time: "20 دقائق",
-    ratings: 3.9,
+}`,
   },
   {
     id: 11,
-    title: "شاشة LCD عبر I2C مع نص ورموز",
+    title: "I2C LCD with text and symbols",
     image: "https://i.ytimg.com/vi/SNt3UsMEqc8/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=SNt3UsMEqc8",
-    description: "عرض نص على شاشة 16×2 باستخدام I2C…",
-    tutorialGoals: [
-      "توصيل I2C",
-      "مكتبة LiquidCrystal_I2C",
-      "رسائل متحركة (Scrolling)",
-    ],
+    description: "Display text on a 16×2 I2C LCD...",
+    tutorialGoals: ["I2C wiring", "LiquidCrystal_I2C", "Scrolling messages"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× شاشة I2C LCD (16×2)",
-      "4× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× I2C LCD (16×2)",
+      "4× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E11-I2C-LCD/i2c-lcd.png",
@@ -417,30 +360,21 @@ void loop(){
   lcd.setCursor(0,1);
   lcd.print(millis()/1000);
   delay(500);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["LCD", "I2C", "شاشة", "LiquidCrystal_I2C"],
-    time: "40 دقائق",
-    ratings: 4.5,
+}`,
   },
   {
     id: 12,
-    title: "مشفّر دوّار (Rotary) والمقاطعات",
+    title: "Rotary encoder and interrupts",
     image: "https://i.ytimg.com/vi/gPLpPFmv-Zc/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=gPLpPFmv-Zc",
-    description: "استخدام مشفر دوّار (rotary) والمقاطعات…",
-    tutorialGoals: [
-      "توصيل المشفر",
-      "استخدام المقاطعات (interrupts)",
-      "اكتشاف الدوران",
-    ],
+    description: "Use rotary encoder and interrupts...",
+    tutorialGoals: ["Encoder wiring", "Using interrupts", "Detecting rotation"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× وحدة مشفّر دوّار",
-      "3× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× Rotary encoder module",
+      "3× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E12-rotary-encoder/rotary-encoder.png",
@@ -463,26 +397,25 @@ void setup(){
 void loop(){
   Serial.println(position);
   delay(200);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["Rotary Encoder", "مشفّر دوّار", "Interrupts", "مقاطعات"],
-    time: "45 دقائق",
-    ratings: 4.7,
+}`,
   },
   {
     id: 13,
-    title: "حساس DHT11 للحرارة والرطوبة",
+    title: "DHT11 humidity and temperature sensor",
     image: "https://i.ytimg.com/vi/lrDl8NhMwQw/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=lrDl8NhMwQw",
-    description: "قراءة الرطوبة والحرارة باستخدام DHT11…",
-    tutorialGoals: ["التعامل مع DHT11", "قراءة الرطوبة", "العرض عبر Serial"],
+    description: "Read humidity and temperature using DHT11...",
+    tutorialGoals: [
+      "Interfacing with DHT11",
+      "Reading humidity",
+      "Serial display",
+    ],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× وحدة حساس DHT11",
-      "3× أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× DHT11 sensor module",
+      "3× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E13-dht11-dht22-temp-humid-sensor/dht11-dht22.png",
@@ -504,30 +437,25 @@ void loop(){
   Serial.print("%  T: "); Serial.print(t);
   Serial.println("°C");
   delay(2000);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["DHT11", "مستشعرات", "حرارة", "رطوبة"],
-    time: "35 دقائق",
-    ratings: 4.3,
+}`,
   },
   {
     id: 14,
-    title: "محرك خطوي 28BYJ-48 مع سائق ULN2003",
+    title: "28BYJ-48 stepper motor with ULN2003 driver",
     image: "https://i.ytimg.com/vi/4iRvjBwAzrM/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=4iRvjBwAzrM",
-    description: "التحكم بمحرك خطوي عبر ULN2003…",
+    description: "Control a stepper motor via ULN2003...",
     tutorialGoals: [
-      "التحكم بمحرك خطوي",
-      "استخدام المكتبة",
-      "التحكم بالسرعة/الاتجاه",
+      "Stepper control",
+      "Library usage",
+      "Speed/direction control",
     ],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× محرك خطوي 28BYJ‑48",
-      "1× وحدة سائق ULN2003",
-      "أسلاك توصيل",
+      "1× USB cable",
+      "1× 28BYJ‑48 stepper motor",
+      "1× ULN2003 driver module",
+      "Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E14-stepper-motor/stepper-motor.png",
@@ -545,27 +473,22 @@ void loop(){
   delay(500);
   stepper.step(-stepsPerRev);
   delay(500);
-}
-`,
-    difficulty: "متوسط",
-    tags: ["محركات", "محرك خطوي", "Stepper Motor", "ULN2003"],
-    time: "50 دقائق",
-    ratings: 4.6,
+}`,
   },
   {
     id: 15,
-    title: "زرّ ضغط طويل مقابل قصير",
+    title: "Long press button",
     image: "https://i.ytimg.com/vi/TD7vjJy0w8U/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=TD7vjJy0w8U",
-    description: "كشف الضغط القصير مقابل الطويل على الزر…",
-    tutorialGoals: ["مدة الضغط", "منطق الضغط الطويل"],
+    description: "Detect short vs long button presses...",
+    tutorialGoals: ["Press duration", "Long-press logic"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× زر ضغط",
-      "1× مقاوم 10 kΩ",
-      "لوحة تجارب",
-      "أسلاك توصيل",
+      "1× USB cable",
+      "1× Pushbutton",
+      "1× 10 kΩ resistor",
+      "Breadboard",
+      "Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E15-switch-long-press/E15-switch-long-press.png",
@@ -587,27 +510,22 @@ void loop(){
     Serial.println(held > longPress ? "Long press" : "Short press");
     pressedTime = 0;
   }
-}
-`,
-    difficulty: "متوسط",
-    tags: ["زر ضغط", "Long Press", "Short Press", "Digital Input"],
-    time: "30 دقائق",
-    ratings: 4.2,
+}`,
   },
   {
     id: 16,
-    title: "توّسع I/O PCF8574 عبر I2C مع LCD",
+    title: "PCF8574 I2C I/O expander with LCD",
     image: "https://i.ytimg.com/vi/aACOC9XBBks/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=aACOC9XBBks",
-    description: "تشغيل شاشة LCD باستخدام مفرّع I/O PCF8574…",
-    tutorialGoals: ["توسيع I/O", "اتصال I2C", "التحكم بـ LCD"],
+    description: "Drive LCD via PCF8574 I/O expander...",
+    tutorialGoals: ["I/O expansion", "I2C comm", "LCD control"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× لوحة تجارب",
-      "1× وحدة PCF8574",
-      "1× شاشة I2C LCD (16×2)",
-      "أسلاك توصيل",
+      "1× USB cable",
+      "1× Breadboard",
+      "1× PCF8574 module",
+      "1× I2C LCD (16×2)",
+      "Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E16-LCD-SPI-ST7920-128x64/LCD-SPI-ST7920-128x64.png",
@@ -625,26 +543,22 @@ void setup(){
 
 void loop(){}
 `,
-    difficulty: "متقدم",
-    tags: ["I2C", "LCD", "PCF8574", "I/O Expander"],
-    time: "60 دقائق",
-    ratings: 4.4,
   },
   {
     id: 17,
-    title: "مسجل بيانات الحرارة باستخدام بطاقة SD",
+    title: "Temperature data logger with SD card",
     image: "https://i.ytimg.com/vi/OXieoH5IsAI/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=OXieoH5IsAI",
-    description: "تسجيل قراءات الحرارة إلى بطاقة SD…",
-    tutorialGoals: ["اتصال SPI", "معالجة الملفات", "بنية البيانات"],
+    description: "Log temperature readings to an SD card...",
+    tutorialGoals: ["SPI communication", "File handling", "Data structuring"],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× وحدة بطاقة SD",
-      "1× بطاقة SD",
-      "1× حساس حرارة",
-      "لوحة تجارب",
-      "أسلاك توصيل",
+      "1× USB cable",
+      "1× SD card module",
+      "1× SD card",
+      "1× Temperature sensor",
+      "Breadboard",
+      "Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E17-voltage-sensor/voltage-sensor.png",
@@ -662,7 +576,7 @@ void setup(){
   Serial.begin(9600);
   dht.begin();
   if (!SD.begin(chipSelect)) {
-    Serial.println("فشل SD");
+    Serial.println("SD failed");
     return;
   }
 }
@@ -677,30 +591,25 @@ void loop(){
     data.close();
   }
   delay(5000);
-}
-`,
-    difficulty: "متقدم",
-    tags: ["SD Card", "SPI", "Data Logging", "مستشعرات", "حرارة"],
-    time: "75 دقائق",
-    ratings: 4.8,
+}`,
   },
   {
     id: 18,
-    title: "حساس التسارع والدوران MPU6050",
+    title: "MPU6050 accelerometer and gyroscope sensor",
     image: "https://i.ytimg.com/vi/m67vZaXu0zY/mqdefault.jpg",
     youtubeLink: "https://www.youtube.com/watch?v=m67vZaXu0zY",
-    description: "قراءة التسارع والدوران من MPU6050…",
+    description: "Read acceleration and rotation from MPU6050...",
     tutorialGoals: [
-      "تواصل I2C",
-      "بيانات التسارع والجييروسكوب",
-      "تفسير البيانات",
+      "I2C interfacing",
+      "Accel & gyro data",
+      "Data interpretation",
     ],
     componentsNeeded: [
       "1× Arduino",
-      "1× كابل USB",
-      "1× وحدة MPU6050",
-      "لوحة تجارب",
-      "4× أسلاك توصيل",
+      "1× USB cable",
+      "1× MPU6050 sensor module",
+      "Breadboard",
+      "4× Jumper wires",
     ],
     circuit:
       "https://raw.githubusercontent.com/BasOnTech/Arduino-Beginners-EN/master/E18-OLED-I2C-SSD1306-128X64/OLED-I2C-SSD1306-128X64.png",
@@ -721,16 +630,11 @@ void loop(){
   mpu.getAcceleration(&ax,&ay,&az);
   Serial.print("A: ");
   Serial.print(ax); Serial.print(" ");
-  Serial.print(ay);
+  Serial.print(ay); Serial.print(" ");
   Serial.println(az);
   delay(500);
-}
-`,
-    difficulty: "متقدم",
-    tags: ["MPU6050", "I2C", "Accelerometer", "Gyroscope", "مستشعرات"],
-    time: "65 دقائق",
-    ratings: 4.5,
+}`,
   },
 ];
 
-export default arduinoTutorialsData;
+export default arduinoTutorialsDataEN;

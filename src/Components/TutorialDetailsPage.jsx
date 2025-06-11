@@ -16,7 +16,7 @@ function TutorialDetailsPage() {
 
   return (
     <>
-      <YoutubeVideoComponent youtubeLink={youtubeLink} title={title} />
+      <YoutubeVideoComponent youtubeLink={youtubeLink} />
       <TutorialDetailsComponent
         title={title}
         description={description}
