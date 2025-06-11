@@ -12,7 +12,7 @@ function CodeBlock({ code, language = "javascript" }) {
         showLineNumbers
         customStyle={{
           borderRadius: "10px",
-          padding: "20px",
+          padding: "10px",
           fontSize: "0.9rem",
           lineHeight: "1.5",
         }}
