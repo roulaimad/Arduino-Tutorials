@@ -27,7 +27,7 @@ void loop() {
 `,
     difficulty: "مبتدئ",
     tags: "أساسيات",
-    time: "10 دقائق",
+    time: "10",
     ratings: 4.5,
   },
   {
@@ -63,7 +63,7 @@ void loop() {
 `,
     difficulty: "مبتدئ",
     tags: "أساسيات",
-    time: "15 دقائق",
+    time: "15",
     ratings: 4.2,
   },
   {
@@ -97,7 +97,7 @@ void loop() {
 `,
     difficulty: "مبتدئ",
     tags: "PWM",
-    time: "20 دقائق",
+    time: "20",
     ratings: 4.7,
   },
   {
@@ -138,7 +138,7 @@ void loop() {
 `,
     difficulty: "مبتدئ",
     tags: "مقاومة متغيرة",
-    time: "25 دقائق",
+    time: "25",
     ratings: 4.3,
   },
   {
@@ -178,7 +178,7 @@ void loop() {
 `,
     difficulty: "مبتدئ",
     tags: "زر ضغط",
-    time: "30 دقائق",
+    time: "30",
     ratings: 4.6,
   },
   {
@@ -223,7 +223,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "مستشعرات",
-    time: "35 دقائق",
+    time: "35",
     ratings: 4.4,
   },
   {
@@ -265,7 +265,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "مستشعرات",
-    time: "40 دقائق",
+    time: "40",
     ratings: 4.8,
   },
   {
@@ -306,7 +306,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "Joystick",
-    time: "45 دقائق",
+    time: "45",
     ratings: 4.1,
   },
   {
@@ -347,7 +347,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "لاسلكي",
-    time: "50 دقائق",
+    time: "50",
     ratings: 4.9,
   },
 
@@ -379,7 +379,7 @@ void loop(){
 `,
     difficulty: "مبتدئ",
     tags: "أساسيات",
-    time: "20 دقائق",
+    time: "20",
     ratings: 3.9,
   },
   {
@@ -421,7 +421,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "شاشات",
-    time: "40 دقائق",
+    time: "40",
     ratings: 4.5,
   },
   {
@@ -467,7 +467,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "مشفّر دوّار",
-    time: "45 دقائق",
+    time: "45",
     ratings: 4.7,
   },
   {
@@ -508,7 +508,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "مستشعرات",
-    time: "35 دقائق",
+    time: "35",
     ratings: 4.3,
   },
   {
@@ -549,7 +549,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "محركات",
-    time: "50 دقائق",
+    time: "50",
     ratings: 4.6,
   },
   {
@@ -591,7 +591,7 @@ void loop(){
 `,
     difficulty: "متوسط",
     tags: "زر ضغط",
-    time: "30 دقائق",
+    time: "30",
     ratings: 4.2,
   },
   {
@@ -627,7 +627,7 @@ void loop(){}
 `,
     difficulty: "متقدم",
     tags: "شاشات",
-    time: "60 دقائق",
+    time: "60",
     ratings: 4.4,
   },
   {
@@ -681,7 +681,7 @@ void loop(){
 `,
     difficulty: "متقدم",
     tags: "تخزين",
-    time: "75 دقائق",
+    time: "75",
     ratings: 4.8,
   },
   {
@@ -728,7 +728,7 @@ void loop(){
 `,
     difficulty: "متقدم",
     tags: "مستشعرات",
-    time: "65 دقائق",
+    time: "65",
     ratings: 4.5,
   },
 ];

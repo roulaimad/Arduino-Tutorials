@@ -51,8 +51,8 @@ function TutorialCard({ id, image, title, description, time, tags }) {
           <span>756</span>
         </div>
         <div className="flex items-center gap-1">
+          <span dir="rtl">{time} دقيقة</span>
           <Clock className="w-4 h-4" />
-          <span>{time}</span>
         </div>
       </div>
 

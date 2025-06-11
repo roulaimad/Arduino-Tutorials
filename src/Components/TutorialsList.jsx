@@ -6,8 +6,11 @@ function TutorialsList() {
   console.log(arduinoTutorialsData[0].image);
 
   return (
-    <div>
-      <div className="grid grid-cols-3 gap-4">
+    <div className="p-10 text-center max-w-6xl mx-auto bg-[lightgray]">
+      <div
+        className="grid grid-cols-3 gap-4"
+        style={{ fontFamily: "Cairo, sans-serif" }}
+      >
         {arduinoTutorialsData.map((tutorial) => (
           <TutorialCard
             key={tutorial.id}
