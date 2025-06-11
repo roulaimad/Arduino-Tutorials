@@ -1,23 +1,61 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TutorialDetailsPage from "./TutorialDetailsPage";
+import { Play, Star, Users, Clock } from "lucide-react";
 
-function TutorialCard({ id, image, title }) {
+function TutorialCard({ id, image, title, description, time, tags }) {
   return (
-    <Link to={`${id}`}>
-      <div className="text-center cursor-pointer">
-        <div className="p-1 bg-white rounded-lg inline-block max-w-xs w-full">
-          <img
-            src={image}
-            alt=""
-            className="w-full h-40 object-cover rounded-md"
-          />
-        </div>
-        <h2 className="mt-0 text-lg font-bold text-white max-w-xs w-full mx-auto">
-          {id}# {title}
-        </h2>
+    <div className="bg-[#FFF9F1] rounded-xl shadow-md overflow-hidden w-80 p-4 relative">
+      {/*=========== Difficulty badge ===========*/}
+      <span className="absolute top-5 right-5 bg-yellow-300 text-sm text-gray-800 px-2 py-0.5 rounded-full font-medium">
+        متوسط
+      </span>
+
+      {/*=========== Category tag ===========*/}
+      <span className="absolute top-5 left-5 bg-gray-200 text-sm text-gray-700 px-2 py-0.5 rounded-full font-medium">
+        {tags}
+      </span>
+
+      {/*=========== Image placeholder ===========*/}
+      <div className="bg-gray-100 h-40 flex items-center justify-center rounded-lg mb-4">
+        {/* <span className="text-gray-400"></span> */}
+        <img src={image} />
       </div>
-    </Link>
+
+      {/*=========== Title ===========*/}
+      <h2 dir="rtl" className="text-lg font-bold text-gray-800 mb-1 text-right">
+        {title}
+      </h2>
+
+      {/*=========== Description ===========*/}
+      <p dir="rtl" className="text-sm text-gray-600 mb-4 text-right">
+        {description}
+      </p>
+
+      {/*=========== Info Row ===========*/}
+      <div className="flex justify-between items-center text-sm text-gray-600 mb-4">
+        <div className="flex items-center gap-1">
+          <Star className="w-4 h-4 text-yellow-400" />
+          <span>4.9</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <Users className="w-4 h-4" />
+          <span>756</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <Clock className="w-4 h-4" />
+          <span>{time}</span>
+        </div>
+      </div>
+
+      {/* Button */}
+      <Link to={`${id}`}>
+        <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-semibold flex justify-center items-center gap-2 cursor-pointer">
+          <Play className="w-4 h-4" />
+          ابدأ الدرس
+        </button>
+      </Link>
+    </div>
   );
 }
 

@@ -14,6 +14,9 @@ function TutorialsList() {
             id={tutorial.id}
             image={tutorial.image}
             title={tutorial.title}
+            description={tutorial.description}
+            time={tutorial.time}
+            tags={tutorial.tags}
           />
         ))}
       </div>
