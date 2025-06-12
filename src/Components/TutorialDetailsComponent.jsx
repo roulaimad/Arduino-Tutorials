@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import CodeBlock from "./CodeBlock";
+import toast from "react-hot-toast";
+
 import {
-  ArrowLeft,
   Box,
-  Check,
-  CheckCheck,
   CheckCircle,
-  Circle,
   CircleArrowLeft,
   Goal,
+  Copy,
+  Code,
+  Code2,
 } from "lucide-react";
 
 function TutorialDetailsComponent({
@@ -19,6 +20,15 @@ function TutorialDetailsComponent({
   code,
   circuit,
 }) {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(code);
+    toast.success("تم النسخ بنجاح");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div style={{ fontFamily: "Cairo, sans-serif" }} dir="rtl">
       <div className="p-10 max-w-6xl mx-auto">
@@ -35,33 +45,55 @@ function TutorialDetailsComponent({
               <b className="block mb-5 text-2xl">أهداف الدرس</b>
             </div>
             {goals.map((goal, id) => (
-              <div className="flex items-center gap-3 pr-6 bg-green-50 mb-2 rounded-b-2xl">
+              <div
+                key={id}
+                className="flex items-center gap-3 pr-6 bg-green-50 mb-2 rounded-b-2xl"
+              >
                 <CheckCircle className="w-4 h-4 text-green-600" />
-                <p key={id} className="mb-3 ">
-                  {goal}
-                </p>
+                <p className="mb-3">{goal}</p>
               </div>
             ))}
           </div>
+
           <div className="bg-white text-black rounded-xl p-6 text-right mb-6">
             <div className="flex items-start gap-1">
               <Box className="w-6 h-6 text-green-600" />
               <b className="block mb-5 text-2xl">المكونات المطلوبة</b>
             </div>
             {components.map((component, id) => (
-              <div className="flex items-center gap-3 pr-6 bg-green-50 mb-2 rounded-b-2xl">
+              <div
+                key={id}
+                className="flex items-center gap-3 pr-6 bg-green-50 mb-2 rounded-b-2xl"
+              >
                 <CircleArrowLeft className="w-4 h-4 mb-1.5 text-green-600" />
-                <p key={id} className="mb-3">
-                  {component}
-                </p>
+                <p className="mb-3">{component}</p>
               </div>
             ))}
           </div>
-          <div dir="ltr">
+
+          <div dir="ltr" className="mb-8">
+            <div className="flex items-center justify-between">
+              <button
+                dir="rtl"
+                onClick={copyToClipboard}
+                className="flex items-center gap-2 text-sm bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700"
+              >
+                <Copy className="w-4 h-4" />
+                {copied ? "تم النسخ!" : "نسخ الكود"}
+              </button>
+              <div className="flex mr-2 gap-2">
+                <b dir="rtl" className="block mr-1 text-2xl">
+                  الكود البرمجي
+                </b>
+                <Code2 className="w-8 h-8 text-green-600" />
+              </div>
+            </div>
+
             <CodeBlock code={code} language="javascript" />
           </div>
-          <div className="bg-white text-black rounded-xl p-6 text-left mb-6">
-            <b className="block mb-2 text-2xl">Circuit Diagram</b>
+
+          <div dir="rtl" className="bg-white text-black rounded-xl p-6 mb-6">
+            <b className="block mb-10 text-2xl">دارة المشروع</b>
             <img src={circuit} alt="circuit image" />
           </div>
         </div>

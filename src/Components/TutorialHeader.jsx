@@ -10,8 +10,8 @@ function TutorialHeader({
   ratings,
 }) {
   return (
-    <div dir="rtl" className="bg-orange-500 w-full h-53 p-4">
-      <div className="flex flex-col text-white">
+    <div dir="rtl" className="bg-orange-500 w-full h-auto flex justify-center">
+      <div className="flex flex-col text-white p-10 w-6xl">
         {/* tags */}
         <div className="flex gap-5 pb-3">
           <div className="bg-orange-300 text-sm px-2 py-0.5 rounded-full font-medium">
@@ -22,9 +22,9 @@ function TutorialHeader({
           </div>
         </div>
         {/* title */}
-        <div className="text-4xl font-bold pb-4">{title}</div>
+        <div className="text-5xl font-bold pb-4">{title}</div>
         {/* desc */}
-        <div className="pb-3">{description}</div>
+        <div className="text-xl pb-3">{description}</div>
         {/* details */}
         <div className="flex gap-10">
           <div className="flex gap-2 items-center">
