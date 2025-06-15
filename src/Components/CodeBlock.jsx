@@ -3,7 +3,7 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function CodeBlock({ code, language = "javascript" }) {
+function CodeBlock({ code, language = "C++" }) {
   return (
     <div className="my-6">
       <SyntaxHighlighter

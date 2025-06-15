@@ -3,12 +3,11 @@ import TutorialCard from "./TutorialCard";
 import arduinoTutorialsData from "../Data/ARDUINO-TUTORIAL-DATA";
 
 function TutorialsList() {
-  console.log(arduinoTutorialsData[0].image);
 
   return (
-    <div className="p-10 text-center max-w-6xl mx-auto bg-[lightgray]">
+    <div className="px-20 py-10 text-center shadow-2xl  mx-auto bg-slate-100">
       <div
-        className="grid grid-cols-3 gap-4"
+        className="grid grid-cols-4 gap-4"
         style={{ fontFamily: "Cairo, sans-serif" }}
       >
         {arduinoTutorialsData.map((tutorial) => (
@@ -20,6 +19,7 @@ function TutorialsList() {
             description={tutorial.description}
             time={tutorial.time}
             tags={tutorial.tags}
+            difficulty={tutorial.difficulty}
           />
         ))}
       </div>

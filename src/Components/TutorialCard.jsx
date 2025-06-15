@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import TutorialDetailsPage from "./TutorialDetailsPage";
 import { Play, Star, Users, Clock } from "lucide-react";
 
-function TutorialCard({ id, image, title, description, time, tags }) {
+function TutorialCard({ id, image, title, description, time, tags, difficulty }) {
   return (
-    <div className="bg-[#FFF9F1] rounded-xl shadow-md overflow-hidden w-80 p-4 relative">
+    <div className="bg-[#FFF9F1] shadow-2xl rounded-xl overflow-hidden w-80 p-4 relative">
       {/*=========== Difficulty badge ===========*/}
       <span className="absolute top-5 right-5 bg-yellow-300 text-sm text-gray-800 px-2 py-0.5 rounded-full font-medium">
-        متوسط
+        {difficulty}
       </span>
 
       {/*=========== Category tag ===========*/}

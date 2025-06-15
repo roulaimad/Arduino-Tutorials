@@ -4,7 +4,7 @@ import arduinoimg from "../assets/arduinogif.gif";
 function TitleSection() {
   return (
     <div
-      className="p-10 max-w-6xl mx-auto bg-[#F97316] flex flex-row mb-0"
+      className="p-10  mx-auto bg-[#F97316] flex flex-row mb-0"
       style={{ fontFamily: "Cairo, sans-serif" }}
     >
       <div className="w-1/2 flex justify-center items-center">
