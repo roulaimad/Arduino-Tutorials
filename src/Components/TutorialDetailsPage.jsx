@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import arduinoTutorialsData from "../Data/ARDUINO-TUTORIAL-DATA";
 import YoutubeVideoComponent from "./YoutubeVideoComponent";
@@ -18,7 +18,9 @@ function TutorialDetailsPage() {
   const difficulty = arduinoTutorialsData[id - 1].difficulty;
   const time = arduinoTutorialsData[id - 1].time;
   const ratings = arduinoTutorialsData[id - 1].ratings;
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <TutorialHeader
