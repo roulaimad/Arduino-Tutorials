@@ -23,6 +23,7 @@ function TutorialsList() {
               time={tutorial.time}
               tags={tutorial.tags}
               difficulty={tutorial.difficulty}
+              ratings={tutorial.ratings}
             />
           ))}
         </div>

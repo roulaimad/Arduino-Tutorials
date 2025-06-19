@@ -3,11 +3,30 @@ import { Link } from "react-router-dom";
 import TutorialDetailsPage from "./TutorialDetailsPage";
 import { Play, Star, Users, Clock } from "lucide-react";
 
-function TutorialCard({ id, image, title, description, time, tags, difficulty }) {
+function TutorialCard({
+  id,
+  image,
+  title,
+  description,
+  time,
+  tags,
+  difficulty,
+  ratings,
+}) {
   return (
     <div className="bg-[#FFF9F1] shadow-2xl rounded-xl overflow-hidden w-80 p-4 relative">
       {/*=========== Difficulty badge ===========*/}
-      <span className="absolute top-5 right-5 bg-yellow-300 text-sm text-gray-800 px-2 py-0.5 rounded-full font-medium">
+      <span
+        className={`absolute top-5 right-5  *:
+        ${
+          difficulty === "مبتدئ"
+            ? "bg-[#A7F3D0]"
+            : difficulty === "متوسط"
+            ? "bg-[#FCD34D]"
+            : "bg-[#F87171]"
+        }
+      text-sm text-gray-800 px-2 py-0.5 rounded-full font-medium`}
+      >
         {difficulty}
       </span>
 
@@ -44,7 +63,7 @@ function TutorialCard({ id, image, title, description, time, tags, difficulty })
       <div className="flex justify-between items-center text-sm text-gray-600 mb-4">
         <div className="flex items-center gap-1">
           <Star className="w-4 h-4 text-yellow-400" />
-          <span>4.9</span>
+          <span>{ratings}</span>
         </div>
         <div className="flex items-center gap-1">
           <Users className="w-4 h-4" />
