@@ -14,7 +14,7 @@ function TutorialCard({
   ratings,
 }) {
   return (
-    <div className="bg-[#FFF9F1] shadow-2xl rounded-xl overflow-hidden w-80 p-4 relative">
+    <div className="bg-[#FFF9F1] shadow-2xl rounded-xl overflow-hidden w-80 p-4 relative transform transition duration-300 hover:scale-105 hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
       {/*=========== Difficulty badge ===========*/}
       <span
         className={`absolute top-5 right-5  *:
