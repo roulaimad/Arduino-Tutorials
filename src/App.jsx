@@ -9,8 +9,14 @@ function App() {
     <Router>
       <Toaster position="top-center" reverseOrder={false} />
       <Routes>
-        <Route path="/" element={<ArduinoTutorialsComponent />} />
-        <Route path="/:id" element={<TutorialDetailsPage />} />
+        <Route
+          path="/Arduino-Tutorials"
+          element={<ArduinoTutorialsComponent />}
+        />
+        <Route
+          path="/Arduino-Tutorials/:id"
+          element={<TutorialDetailsPage />}
+        />
       </Routes>
     </Router>
   );
