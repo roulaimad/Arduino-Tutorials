@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import CodeBlock from "./CodeBlock";
 import toast from "react-hot-toast";
-
 import {
   Box,
   CheckCircle,
   CircleArrowLeft,
   Goal,
   Copy,
-  Code,
   Code2,
 } from "lucide-react";
 
@@ -31,9 +29,11 @@ function TutorialDetailsComponent({
 
   return (
     <div style={{ fontFamily: "Cairo, sans-serif" }} dir="rtl">
-      <div className="p-10 max-w-6xl mx-auto">
+      <div className="p-4 sm:p-10 max-w-6xl mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl text-right mb-6 font-extrabold">{title}</h1>
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl text-right mb-6 font-extrabold">
+            {title}
+          </h1>
 
           <div className="text-right mb-8">
             <p>{description}</p>
@@ -42,7 +42,9 @@ function TutorialDetailsComponent({
           <div className="bg-white text-black rounded-xl p-6 text-right mb-6">
             <div className="flex items-start gap-1">
               <Goal className="w-8 h-8 text-green-600" />
-              <b className="block mb-5 text-2xl">أهداف الدرس</b>
+              <b className="block mb-5 text-lg sm:text-xl lg:text-2xl">
+                أهداف الدرس
+              </b>
             </div>
             {goals.map((goal, id) => (
               <div
@@ -58,7 +60,9 @@ function TutorialDetailsComponent({
           <div className="bg-white text-black rounded-xl p-6 text-right mb-6">
             <div className="flex items-start gap-1">
               <Box className="w-6 h-6 text-green-600" />
-              <b className="block mb-5 text-2xl">المكونات المطلوبة</b>
+              <b className="block mb-5 text-lg sm:text-xl lg:text-2xl">
+                المكونات المطلوبة
+              </b>
             </div>
             {components.map((component, id) => (
               <div
@@ -82,7 +86,10 @@ function TutorialDetailsComponent({
                 {copied ? "تم النسخ!" : "نسخ الكود"}
               </button>
               <div className="flex mr-2 gap-2">
-                <b dir="rtl" className="block mr-1 text-2xl">
+                <b
+                  dir="rtl"
+                  className="block mr-1 text-lg sm:text-xl lg:text-2xl"
+                >
                   الكود البرمجي
                 </b>
                 <Code2 className="w-8 h-8 text-green-600" />
@@ -93,7 +100,9 @@ function TutorialDetailsComponent({
           </div>
 
           <div dir="rtl" className="bg-white text-black rounded-xl p-6 mb-6">
-            <b className="block mb-10 text-2xl">دارة المشروع</b>
+            <b className="block mb-10 text-lg sm:text-xl lg:text-2xl">
+              دارة المشروع
+            </b>
             <img src={circuit} alt="circuit image" />
           </div>
         </div>
