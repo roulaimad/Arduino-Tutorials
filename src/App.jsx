@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import ArduinoTutorialsComponent from "./Components/ArduinoTutorialsComponent";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TutorialDetailsPage from "./Components/TutorialDetailsPage";
 import { Toaster } from "react-hot-toast";
 function App() {
