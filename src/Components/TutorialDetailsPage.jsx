@@ -1,47 +1,59 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import TutorialCard from "./TutorialCard";
 import arduinoTutorialsData from "../Data/ARDUINO-TUTORIAL-DATA";
-import YoutubeVideoComponent from "./YoutubeVideoComponent";
-import TutorialDetailsComponent from "./TutorialDetailsComponent";
-import TutorialHeader from "./TutorialHeader";
-function TutorialDetailsPage() {
-  const { id } = useParams();
-  const title = arduinoTutorialsData[id - 1].title;
-  const youtubeLink = arduinoTutorialsData[id - 1].youtubeLink;
-  const image = arduinoTutorialsData[id - 1].image;
-  const description = arduinoTutorialsData[id - 1].description;
-  const tutorialGoals = arduinoTutorialsData[id - 1].tutorialGoals;
-  const componentsNeeded = arduinoTutorialsData[id - 1].componentsNeeded;
-  const code = arduinoTutorialsData[id - 1].arduinoCode;
-  const circuit = arduinoTutorialsData[id - 1].circuit;
-  const tags = arduinoTutorialsData[id - 1].tags;
-  const difficulty = arduinoTutorialsData[id - 1].difficulty;
-  const time = arduinoTutorialsData[id - 1].time;
-  const ratings = arduinoTutorialsData[id - 1].ratings;
+
+function TutorialsList() {
+  const [selectedDifficulty, setSelectedDifficulty] = useState("الكل");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const filteredTutorials =
+    selectedDifficulty === "الكل"
+      ? arduinoTutorialsData
+      : arduinoTutorialsData.filter(
+          (tut) => tut.difficulty === selectedDifficulty
+        );
+
   return (
-    <>
-      <TutorialHeader
-        title={title}
-        description={description}
-        tags={tags}
-        difficulty={difficulty}
-        time={time}
-        ratings={ratings}
-      />
-      <YoutubeVideoComponent youtubeLink={youtubeLink} />
-      <TutorialDetailsComponent
-        title={title}
-        description={description}
-        goals={tutorialGoals}
-        components={componentsNeeded}
-        code={code}
-        circuit={circuit}
-      />
-    </>
+    <div className="px-4 sm:px-10 py-10 text-center shadow-2xl mx-auto bg-slate-100">
+      <div className="mb-6 flex justify-center">
+        <select
+          className="bg-white text-gray-800 font-medium border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-200"
+          style={{ fontFamily: "Cairo, sans-serif" }}
+          value={selectedDifficulty}
+          onChange={(e) => setSelectedDifficulty(e.target.value)}
+        >
+          <option value="الكل">كل المستويات</option>
+          <option value="مبتدئ">مبتدئ</option>
+          <option value="متوسط">متوسط</option>
+          <option value="متقدم">متقدم</option>
+        </select>
+      </div>
+
+      <div
+        className="flex justify-center"
+        style={{ fontFamily: "Cairo, sans-serif" }}
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+          {filteredTutorials.map((tutorial) => (
+            <TutorialCard
+              key={tutorial.id}
+              id={tutorial.id}
+              image={tutorial.image}
+              title={tutorial.title}
+              description={tutorial.description}
+              time={tutorial.time}
+              tags={tutorial.tags}
+              difficulty={tutorial.difficulty}
+              ratings={tutorial.ratings}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
-export default TutorialDetailsPage;
+export default TutorialsList;
